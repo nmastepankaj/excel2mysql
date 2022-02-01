@@ -1,4 +1,11 @@
-Django==3.2.11
-gunicorn==19.7.1
-psycopg2==2.7.3.2
-pytz==2017.3
+asgiref==3.4.1
+dj-database-url==0.5.0
+Django==4.0.1
+django-heroku==0.3.1
+gunicorn==20.1.0
+pip==21.3.1
+psycopg2==2.9.3
+setuptools==59.5.0
+sqlparse==0.4.2
+wheel==0.37.0
+whitenoise==5.3.0
