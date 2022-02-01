@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E2M</title>
+    <link rel="stylesheet" href="/static/css/e2m.css">
+    <link rel="stylesheet" href="/static/css/convert.css">
+    <link href="/static/css/about.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="main_website">
+        <header>
+            <div class="site_logo">
+               <div class="navbar">
+                   <span class="navbar_box"></span>
+                   <span class="navbar_box"></span>
+                   <span class="navbar_box"></span>
+               </div>
+               <p> E2M</p>
+            </div>
+            <div class="site_links">
+                <a href="/index">Home</a>
+                <a href="https://nehajha87.github.io/">About</a>
+                <a href="/contact">Contacts</a>
+            </div>
+        </header>
+        {% block body %}{% endblock body %}
+
+    </div>
+            <footer>
+                <div class="footer">
+                    <p class="copyright-line">© Copyright 2020 - Made by Neha Jha</p>
+                </div>
+              </footer>
+        </div>
+        <script src="/static/js/nav.js"></script>
+    </body>
+    </html>

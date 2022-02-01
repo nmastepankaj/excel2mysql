@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<div class="website_body">
+    <div class="sub_header">
+
+   
+<div class="excel"><img src="static/images/excel.jpg" alt=""></div>
+   <div class="main_text">
+    <p>Excel To Mysql</p>
+    <p>  Converter </p>
+   </div>
+   <div class="mysql"><img src="static/images/mysql.png" alt=""></div>
+</div>
+   <div class="upload_files btn-1 outer-shadow hover-in-shadow">
+       <form action="uploadcsv" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+           <div class="input-file btn-1 outer-shadow hover-in-shadow" data-text="Upload">
+           <input type="file" name="filetoupload" id="csvFile" class="">
+           </div>
+           <button type="submit" id="submitCsv" name="save" class="btn-1 outer-shadow hover-in-shadow">Upload File</button>
+       </form>
+       {% if uploaded_file_url %}
+        <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+        {% endif %}
+   </div>
+   <div class="instructions">
+       <div class="important_inst outer-shadow btn-1">
+         <h2>! Important Instruction</h2>
+        <ul type="circle-fill">
+           <li>Open your excel file.</li>
+           <li>Export to Csv.</li>
+           <li>Upload CSV file here.</li>
+           <li>Then put the table name.</li>
+           <li>Select or unselect auto_increment (!recommanded)</li>
+           <li>Convert it!</li>
+           <li>download & Enjoy</li>
+        </ul>
+       </div>
+       <div class="features btn-1 outer-shadow">
+        <h2>!features and update</h2>
+        <ul type="circle-fill">
+           <li>Support multiple file in future.</li>
+           <li>Support mutiple converting file.</li>
+           <li>Support for very large also.</li>
+        </ul>
+       </div>
+</div>
+{% include "contact_template.html" %}
+{% endblock body %}

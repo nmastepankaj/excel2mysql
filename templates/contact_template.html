@@ -1,0 +1,40 @@
+<section class="contact-section section" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="section-title">
+                <h2 data-heading="contact">Get In Touch</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="contact-form">
+                <form method="post" action="/contact">
+                    {% csrf_token %}
+                    <div class="contact_row">
+                        <div class="w-50">
+                            <div class="input-group outer-shadow hover-in-shadow">
+                                <input type="text" placeholder="Name" name="conName" id="conName" class="input-control">
+                            </div>
+                            <div class="input-group outer-shadow hover-in-shadow">
+                                <input type="text" placeholder="Email" name="conMail" id="conMail" class="input-control">
+                            </div>
+                            <div class="input-group outer-shadow hover-in-shadow">
+                                <input type="text" placeholder="Mobile No" name="conPhone" id="conPhone" class="input-control">
+                            </div>
+                        </div>
+                        <div class="w-50">
+                            <div class="input-group outer-shadow hover-in-shadow">
+                                <textarea class="input-control" placeholder="Message" id="conContant" name="conContant"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact_row">
+                        <div class="submit-btn">
+                            <button type="submit" id="saveContact" class="btn-1 outer-shadow hover-in-shadow">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </section>
+  <div class="message"></div>

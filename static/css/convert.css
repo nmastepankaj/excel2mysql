@@ -1,0 +1,28 @@
+.input-group #checkId{
+    margin-right: 1rem;
+    height: 1rem;
+    width: 1rem;
+}
+.convert_main_page{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+}
+.heading{
+    justify-self: center;
+    font-size: 3rem;
+}
+.convert_body{
+    justify-self: center;
+}
+.dwn_btn{
+    width: 20rem;
+    justify-self: center;
+}
+.download_button{
+    display: none;
+}
+.succsess{
+    color:green;
+}

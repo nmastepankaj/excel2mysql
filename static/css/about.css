@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #222;
+}
+
+.container_main{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    min-height: 100vh;
+    
+}
+.profile_header{
+    display: flex !important;
+    align-items: center;
+    justify-content: space-around;
+    height: 20rem;
+    margin: 40px;
+    margin-bottom: 0;
+}
+.text_name{
+    color:#222;
+}
+.text_name p:nth-child(1){
+    font-size: 4rem;
+}
+.text_name p:nth-child(2){
+    font-size: 2rem;
+}
+.profile_image{
+    padding-bottom: 0 !important;
+}
+.profile_image img{
+    height: 18rem;
+    position: relative;
+    bottom: -0.4rem;
+}
+
+.container_submain{
+    position: relative;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px,1fr));
+    grid-template-rows: minmax(100px,auto);
+    margin: 40px;
+    grid-auto-flow: dense;
+}
+
+.container_submain .box{
+    padding: 20px;
+    display: grid;
+    font-size: 20px;
+    place-items: center;
+    text-align: center;
+    color: #222;
+    transition: 0.5s;
+    margin: 10px;
+}
+.container_submain .box img{
+    position: relative;
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+.container_submain .box iframe{
+    position: relative;
+    max-width: 100px;
+    margin-bottom: 10px;
+    border: 0;
+}
+
+.container_submain .box:nth-child(1){
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.container_submain .box:nth-child(2){
+    grid-column: span 1;
+    grid-row: span 2;
+}
+.container_submair .box:nth-child(4){
+    grid-column: span 1;
+    grid-row: span 2;
+}
+.container_submain .box:nth-child(5){
+    grid-column: span 3;
+    grid-row: span 1;
+}
+.container_submain .box:last-child{
+    grid-column: span 2;
+}
+
+@media (max-width: 45rem){
+    .container_submain{
+        grid-template-columns: repeat(auto-fill, minmax(auto,auto));
+        grid-template-rows: minmax(auto,auto);
+    }
+    .container_submain .box{
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+    .profile_header{
+        flex-direction: column;
+        height: 30rem;
+     }
+}
+
+@media (max-width: 60rem){
+    .container_submain{
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(auto,auto);
+    }
+
+}

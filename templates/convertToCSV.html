@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+{{uploaded_file_name}}
+<div class="website_body">
+    <div class="heading">Convert Excel to MySql{{uploaded_file_name}}</div>
+    <div class="convert_body">
+        <div class="upload_files btn-1 outer-shadow hover-in-shadow">
+            <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+                <div class="input-group outer-shadow hover-in-shadow">
+                    <input type="text" placeholder="Enter Table Name" name="table_name" class="input-control" id="input_table">
+                </div>
+                <div class="input-group">
+                <input type="checkbox" name="checkId" id="checkId" checked><label for="checkId">Add Id Table with auto increment value</label>
+                </div>
+                <button type="submit" id="submitCsv" name="save" class="btn-1 outer-shadow hover-in-shadow">Convert File</button>
+            </form>
+        </div>
+        <div class="success">
+           <p></p>
+        </div>
+        {% if downloadFile %}
+        <a href="/files/download/{{downloadFile}}" download><button type="submit" id="dwn_btn" class="btn-1 outer-shadow hover-in-shadow">Download File</button></a>
+        {% endif %}
+        
+    </div>
+{% include "contact_template.html" %}
+{% endblock body %}
