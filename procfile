@@ -1,1 +1,1 @@
-web: gunicorn exceltosql.esgi --log-file -
+web: gunicorn excel2m:app --preload
